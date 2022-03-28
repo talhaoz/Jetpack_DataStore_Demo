@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.talhaoz.testzone";
+option java_multiple_files = true;
+
+message UserPreference {
+    string name = 1;
+    int32 age = 2;
+}

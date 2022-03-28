@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Spinner
+        android:id="@+id/spinner_selection"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="30dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etEnterKeyToSave"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name.."
+        android:background="@drawable/style_border_edit_text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/spinner_selection" />
+
+    <EditText
+        android:id="@+id/etEnterValueToSave"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter Age.."
+        android:background="@drawable/style_border_edit_text"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etEnterKeyToSave" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#555555"
+        android:text="Save"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/etEnterValueToSave"
+        app:layout_constraintStart_toStartOf="@+id/etEnterValueToSave"
+        app:layout_constraintTop_toBottomOf="@+id/etEnterValueToSave" />
+
+
+    <Button
+        android:id="@+id/btnRead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#555555"
+        android:text="Read Value"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="@+id/etEnterValueToSave"
+        app:layout_constraintStart_toStartOf="@+id/etEnterValueToSave"
+        app:layout_constraintTop_toBottomOf="@+id/btnSave" />
+
+    <TextView
+        android:id="@+id/tvReadValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:lineSpacingExtra="4dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/btnRead"
+        app:layout_constraintStart_toStartOf="@+id/btnRead"
+        app:layout_constraintTop_toBottomOf="@+id/btnRead"
+        tools:text="Value" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
